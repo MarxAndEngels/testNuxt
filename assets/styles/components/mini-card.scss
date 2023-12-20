@@ -1,0 +1,211 @@
+.mini-card {
+  display: block;
+  background: $color-white;
+  text-decoration: none;
+  color: $color-black;
+  padding: 8px;
+  transition: top .16s;
+  position: relative;
+}
+
+.mini-card__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.mini-card--offer, .mini-card--folder {
+  // background: $color-card;
+  box-shadow: $box-shadow;
+}
+
+.mini-card--offer .mini-card__title {
+  &:after {
+    content: 'Новый';
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    color: $color-white;
+    background: $color-grey;
+    padding: 4px 12px;
+    pointer-events: none;
+  }
+}
+
+.mini-card--folder-menu {
+  background: none;
+}
+
+.mini-card--folder-menu .mini-card__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: $color-white;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.mini-card--offer .mini-card__title {
+  margin-top: 8px;
+}
+
+.mini-card__tech {
+  margin-top: 8px;
+}
+
+.mini-card__bold-title {
+  font-weight: 700;
+}
+
+.mini-card__regular-title {
+  font-weight: 400;
+}
+
+.mini-card__image {
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.mini-card__banner {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: .4;
+}
+
+.mini-card__image--folder {
+  height: 142px;
+  width: auto;
+  display: block;
+  margin: 8px auto 0;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.mini-card__image--folder img {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mini-card__prices {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mini-card__prices-price--actual {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mini-card__prices-price--credit {
+  font-size: 12px;
+}
+
+.mini-card__controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.mini-card__controls .button {
+  flex: 1;
+}
+
+.mini-card__tech {
+  display: flex;
+  font-size: 14px;
+}
+
+.mini-card__tech-item {
+  padding: 0 8px;
+  border-right: 1px solid $color-black;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+.mini-card__slider {
+  @include horizontal-scrollbar;
+  width: calc(100% + 16px);
+  margin-left: -8px;
+  margin-top: -8px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.mini-card__slider--mobile {
+
+}
+
+.mini-card__slider--desktop {
+  display: none;
+}
+
+.mini-card__slider-slide {
+  width: 100%;
+  min-width: 100%;
+  height: 244px;
+  overflow: hidden;
+}
+
+.mini-card__slider-slide img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.mini-card__offer-slide--render img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .catalog__folder-slide {
+    --f-carousel-spacing: 16px;
+    padding: 0;
+    width: calc(33% - 8px) !important;
+  }
+  .mini-card--folder--catalog {
+    width: calc(33% - 23px);
+  }
+  .mini-card--offer {
+    width: calc(33% - 23px);
+  }
+  .mini-card {
+    transition: top .16s;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+
+    &:hover {
+      top: -4px;
+    }
+  }
+  .mini-card__slider--mobile {
+    display: none;
+  }
+  .mini-card__slider--desktop {
+    display: flex;
+  }
+
+}

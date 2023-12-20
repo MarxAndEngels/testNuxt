@@ -1,0 +1,146 @@
+.list__marks {
+  //column-count: 2;
+  gap: 12px;
+}
+
+.list__marks-link {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.list--marks-catalog .list__marks {
+  //column-count: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list--marks-catalog .list__marks-item {
+  width: calc(50% - 10px);
+  display: flex;
+  gap: 6px;
+  border: 1px solid #e7e7e7;
+}
+.list--marks-catalog .list__mark-item_descr{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+
+
+.list--marks-menu .list__marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.list .button {
+  width: 100%;
+}
+
+.list--marks-home .list__marks-item {
+  margin-bottom: 12px;
+  border: 1px solid $color-white;
+}
+
+.list--marks-menu .list__marks-item {
+  width: calc(25% - 30px);
+  height: 130px;
+  border: 1px solid $color-white;
+}
+
+.list--marks-menu .list__marks-item .list__marks-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.list--marks-menu .list__marks-item .list__marks-link .nuxt-icon {
+  width: 53px;
+  height: 48px;
+}
+
+
+.list--marks-home .list__marks-item .list__marks-link {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8px;
+  gap: 12px;
+}
+
+.list--marks-home .list__marks-item .list__marks-link .nuxt-icon {
+  width: 53px;
+  height: 48px;
+}
+
+.list--marks-catalog .list__marks-item {
+  // margin-bottom: 24px;
+}
+
+.list__mark-item_descr-model{
+  color: $color-grey-dark;
+}
+
+.list--marks-catalog .list__marks-item .list__marks-link .nuxt-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.list--marks-catalog .list__marks-item .list__marks-link {
+  height: 53px;
+  display: flex;
+  //flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8px;
+  gap: 10px;
+}
+
+
+.list--marks-catalog .list__marks-item .list__marks-link span {
+  font-size: 12px;
+  width: 100%;
+  // text-align: center;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .list--marks-catalog .list__marks-item {
+    width: calc(19% - 0px);
+  }
+  .list--marks-home {
+    display: flex;
+  }
+  .list--marks-home .list__marks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .list--marks-home .list__marks-item {
+    width: calc(20% - 12px);
+    margin-bottom: 0;
+  }
+  .list--marks-home .button {
+    gap: 40px;
+    justify-content: space-between;
+    width: 180px;
+    height: 130px;
+  }
+  .list--marks-catalog .list__marks {
+    column-count: 7;
+  }
+  .list__marks-link {
+    transition: .16s;
+
+    &:hover {
+      opacity: .64;
+      //background: $color-white;
+      //color: $color-black;
+    }
+  }
+}

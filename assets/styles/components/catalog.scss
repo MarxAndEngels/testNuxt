@@ -1,0 +1,30 @@
+.catalog__folders {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.catalog--taxi{
+  margin-top: 24px;
+}
+.catalog__offers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .catalog__folders {
+    display: flex;
+    gap: 40px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .catalog__offers {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}

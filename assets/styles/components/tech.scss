@@ -1,0 +1,43 @@
+.tech__line {
+  @include horizontal-scrollbar;
+  overflow-x: scroll;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-top: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
+  margin-top: 16px;
+
+}
+
+.tech__line-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tech__line-item .nuxt-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tech__line-item-name {
+  white-space: nowrap;
+}
+
+@media (min-width: $desktop-width) {
+  .tech__line {
+    padding: 8px 0;
+    justify-content: center;
+    gap: 24px;
+  }
+  .tech__line--folder {
+    position: relative;
+    z-index: 3;
+    top: 88px;
+    margin-top: 0;
+  }
+}

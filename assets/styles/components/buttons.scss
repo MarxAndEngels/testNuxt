@@ -1,0 +1,89 @@
+.button {
+  display: flex;
+  height: 52px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: .16s;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black;
+  border-radius: $border-radius;
+}
+
+.button--white {
+  background: $color-white;
+  color: $color-black;
+}
+
+.button--more {
+  width: 100%;
+  background: $color-black;
+  color: $color-white;
+  border: 1px solid $color-white;
+  margin-top: 16px;
+}
+
+.button--credit {
+  background: $color-main;
+  color: $color-white;
+}
+
+
+
+.button--border {
+  background: $color-white;
+  color: $color-black;
+  border: 1px solid $color-black;
+}
+
+.button--border-opacity {
+  color: $color-black;
+  border: 1px solid $color-black;
+}
+.button--credit-mini{
+  color: $color-white;
+  background: $color-main;
+}
+
+.button--black {
+  background: $color-black;
+  color: $color-white;
+}
+
+.button--black-border {
+  background: $color-black;
+  color: $color-white;
+  border: 1px solid $color-white;
+}
+
+.button--opacity {
+  background: none;
+  border: 1px solid $color-white;
+  color: $color-white;
+}
+
+.button--comparison {
+  background: $color-white;
+  border: 1px solid $color-black;
+  color: $color-black;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .button {
+    transition: .16s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .button--filter{
+    margin-top: 12px;
+  }
+}

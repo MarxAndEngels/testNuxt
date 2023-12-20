@@ -1,0 +1,38 @@
+.heading{
+
+}
+.heading--h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.heading--h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.heading--h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: $iphone-12) {
+  .heading--h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .heading--h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
