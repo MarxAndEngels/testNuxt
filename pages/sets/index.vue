@@ -7,7 +7,7 @@
   </section>
   <section class="section section--marks">
     <div class="container">
-      <ListMarksHome/>
+      <ListMarksCatalog/>
     </div>
   </section>
   <section class="section section--sets">

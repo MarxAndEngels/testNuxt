@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 16px;
   .slider-tooltip-bottom{
     display: none;
+  }
+  &.nospace{
+    margin-top: 0;
   }
 }
 
@@ -17,11 +21,26 @@
   }
 }
 
+.filter__list_select{
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+}
+
 
 .filter__list .button {
   width: 100%;
 }
 
+@media screen and (min-width: $tablet-width) {
+  .filter__list_select{
+    display: none;
+  }
+  .filter__list {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (min-width: $desktop-width) {
   .filter__list-control-price{
     // position: relative;
@@ -31,6 +50,7 @@
     flex-direction: row;
     column-gap: 24px;
     row-gap: 24px;
+    
   }
   .filter__list-group {
     display: flex;

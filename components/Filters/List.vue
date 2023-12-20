@@ -1,5 +1,6 @@
 <template>
-  <div class="filter__list">
+<div>
+  <div class="filter__list" v-show="showFilter" :class="{'nospace': !showFilter}"> 
     <div class="filter__list-group">
       <div class="filter__list-item">
         <Select :has-alphabet="true" @select="handlerSelect" :options="marks" title="Марка" type="mark" :value="mark"/>
@@ -31,13 +32,20 @@
              :to-value="chosen_price_to" class="filter__list-control-price"/>
       <button @click="onFilter" class="button button--credit button--filter">показать {{ total }} авто</button>
     </div>
+    </div>
 
+    <div class="filter__list_select" @click="changeShowFilters">
+    <span v-if="showFilter == false">Показать фильтры + </span>
+    <span v-else>Скрыть фильтры - </span>
+  </div>
   </div>
 </template>
 <script setup lang="ts">
 import Select from '~/components/Controls/Select.vue'
 import {computed} from "#imports";
+import { storeToRefs } from 'pinia'
 import {scrollToElement} from "~/helpers/scroll";
+import {useShowFilter} from "~/store/filters";
 import {requestNewFilters} from "~/helpers/request";
 import Radio from "~/components/Controls/Radio.vue";
 import Range from "~/components/Controls/Range.vue";
@@ -45,6 +53,7 @@ import {useSiteConfig} from "~/store/siteConfig";
 import {numberFormat} from "~/helpers/filters";
 import {MarkType} from "~/app/types/marks";
 import {FolderType} from "~/app/types/folders";
+const { isMobile } = useDevice();
 
 const route = useRoute()
 const router = useRouter()
@@ -74,6 +83,21 @@ const price_from = ref<number>(0)
 const chosen_price_from = ref<number>(0)
 const price_to = ref<number>(0)
 const chosen_price_to = ref<number>(0)
+
+const statePrice = ref<boolean>(false)
+
+const showFilterId = useShowFilter()
+const { setShowFilter } = showFilterId
+const { showFilter } = storeToRefs(showFilterId)
+
+
+if(isMobile){
+  setShowFilter(false)
+}
+
+let changeShowFilters = () =>{
+  setShowFilter(!showFilter)
+}
 
 
 let variables = computed<any>(() => {
@@ -113,12 +137,14 @@ driveTypes.value = data.value?.offerFilter.driveType
 bodyType.value = bodyTypes.value?.find((item: { name: string; }) => item.name === route.query.body_type) || null
 gearbox.value = gearboxes.value?.find((item: { name: string; }) => item.name === route.query.gearbox) || null
 
+
 price_from.value = data.value?.offerFilter?.price[0]
 chosen_price_from.value = data.value?.offerFilter?.price[0]
 price_to.value = data.value?.offerFilter?.price[1]
 chosen_price_to.value = data.value?.offerFilter?.price[1]
 
 watch(data, () => {
+
   bodyTypes.value = data.value?.offerFilter?.bodyType
   gearboxes.value = data.value?.offerFilter?.gearbox
 
@@ -137,7 +163,7 @@ const onChangePrice = async (option: any) => {
   if (option.type === 'to') {
     chosen_price_to.value = option.value
   }
-  await request()
+  // await request()
   hasChanged.value = true
 }
 const handlerSelect = async (data: any) => {
@@ -171,6 +197,7 @@ const handlerSelect = async (data: any) => {
   }
   await request()
   hasChanged.value = true
+  statePrice.value = !statePrice.value
 }
 const onFilter = async () => {
   let route = '/new'

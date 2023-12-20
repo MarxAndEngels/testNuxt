@@ -22,7 +22,7 @@
   </section>
   <section class="section section--marks">
     <div class="container">
-      <ListMarksHome/>
+      <ListMarksCatalog/>
     </div>
   </section>
   <section class="section section--filters">
@@ -65,6 +65,7 @@
 
 </template>
 <script setup lang="ts">
+
 import FiltersList from '~/components/Filters/List.vue'
 import CatalogFoldersHome from '~/components/Catalog/FoldersHome.vue'
 import CarouselMain from "~/components/Carousel/Main.vue";
