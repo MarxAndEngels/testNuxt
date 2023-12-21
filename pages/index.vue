@@ -38,18 +38,21 @@
       <CatalogFoldersHome :popular="true"/>
     </div>
   </section>
+
+  <section class="section section--sets">
+    <div class="container">
+      <h2 class="heading heading--h2">Подборки</h2>
+      <SetsMain/>
+    </div>
+  </section>
+  
   <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
     </div>
   </section>
-  <section class="section section--sets">
-    <div class="container">
-      <h2 class="heading heading--h2">Подборки</h2>
-      <Sets/>
-    </div>
-  </section>
+
   <section class="section section--banks">
     <div class="container">
       <h2 class="heading heading--h2">Банки-партнеры</h2>
@@ -70,7 +73,7 @@ import FiltersList from '~/components/Filters/List.vue'
 import CatalogFoldersHome from '~/components/Catalog/FoldersHome.vue'
 import CarouselMain from "~/components/Carousel/Main.vue";
 import Services from '~/components/Services'
-import Sets from '~/components/Sets/index.vue'
+import SetsMain from '~/components/Sets/Main.vue'
 
 import Contacts from "~/components/Contacts/index.vue";
 import {useSiteConfig} from "~/store/siteConfig";

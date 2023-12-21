@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about__line">
-      <div class="about__slider f-carousel f-carousel--about " id="aboutSlider">
+      <!-- <div class="about__slider f-carousel f-carousel--about " id="aboutSlider">
         <div class="f-carousel__viewport">
           <div class="f-carousel__track">
             <div class="about__item f-carousel__slide" v-for="index in slidesNumber">
@@ -12,7 +12,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="about__text">
         <p class="text__p">
           {{ settings.dealer_name }} — автоцентр новых автомобилей в {{ settings.contact_in_city }}. У нас лучшие
