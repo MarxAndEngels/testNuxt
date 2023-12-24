@@ -7,7 +7,7 @@
             {{ item.title }}
           </nuxt-link>
         </div>
-        <div class="header__menu-content">
+        <!-- <div class="header__menu-content">
           <div class="header__menu-folders">
             <h3 class="heading heading--h3">Популярные модели</h3>
             <CatalogFolderMenu/>
@@ -17,7 +17,7 @@
             <h3 class="heading heading--h3">Популярные марки</h3>
             <ListMarksMenu @click="emit('click')"/>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
