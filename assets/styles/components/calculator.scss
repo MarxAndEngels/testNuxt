@@ -84,7 +84,7 @@
   .calculator__slider-step {
     &:first-child {
       &:after {
-        content: "10%";
+        content: "0%";
       }
     }
 
@@ -107,7 +107,7 @@
 
     &:last-child {
       &:after {
-        content: "84";
+        content: "96";
         left: -16px;
       }
     }
@@ -118,7 +118,7 @@
   .calculator__slider-step {
     &:last-child {
       &:after {
-        content: "60";
+        content: "36";
         left: -8px;
       }
     }

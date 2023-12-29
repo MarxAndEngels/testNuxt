@@ -1,7 +1,9 @@
 <template>
   <div class="form__banner">
-    <NuxtPicture :src="`${$device.isMobile ? currentType.banner + '-mobile.jpg' : currentType.banner + '.jpg'}`"
-                 format="webp" densities="x1 x2"/>
+<!--    <NuxtPicture :src="`${$device.isMobile ? currentType.banner + '-mobile.jpg' : currentType.banner + '.jpg'}`"-->
+<!--                 format="webp" densities="x1 x2"/>-->
+
+    <Picture :img="currentType.banner"/>
     <div class="form__banner-content">
       <div class="container">
         <div class="form__banner-title">
@@ -16,6 +18,8 @@
 </template>
 <script setup lang="ts">
 
+import Picture from "~/components/Picture/index.vue";
+
 const props = defineProps<{
   type: string;
 }>();
@@ -23,25 +27,25 @@ const props = defineProps<{
 const types = [
   {
     name: 'credit',
-    banner: '/img/pages/credit/banner',
+    banner: '/img/pages/credit/banner1',
     title: 'выгодное предложение',
     text: 'ставка от 4.9%'
   },
   {
     name: 'exchange',
-    banner: '/img/pages/exchange/banner',
+    banner: '/img/pages/exchange/banner1',
     title: 'выгодное предложение',
     text: 'ставка от 4.9%'
   },
   {
     name: 'installment',
-    banner: '/img/pages/installment/banner',
+    banner: '/img/pages/installment/banner1',
     title: 'выгодное предложение',
     text: 'ставка от 0%'
   },
   {
     name: 'taxi',
-    banner: '/img/pages/taxi/banner',
+    banner: '/img/pages/taxi/banner1',
     title: 'выгодное предложение',
     text: 'ставка от 4,9%'
   }

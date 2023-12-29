@@ -20,14 +20,22 @@
     width: calc(50% - 6px);
   }
 }
-
+.wrapper__filter-options{
+  display: flex;
+  justify-content: space-between;
+}
 .filter__list_select{
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
   display: block;
+  margin-bottom: 16px;
+  width: 100%;
 }
-
+.filter__list_select-wrap{
+  display: flex;
+  align-items: center;
+}
 
 .filter__list .button {
   width: 100%;
@@ -57,12 +65,12 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
-
+    column-gap: 10px;
     &:first-child {
       width: 100%;
     }
     .filter__list-item {
-      width: calc(33% - 12px);
+      width: calc(33% - 4px);
     }
 
     &:last-child {
@@ -73,3 +81,4 @@
     }
   }
 }
+

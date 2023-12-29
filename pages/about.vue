@@ -10,17 +10,22 @@
       <About/>
     </div>
   </section>
-  <section class="section section--services">
+  <!-- <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
     </div>
-  </section>
+  </section> -->
 </template>
 <script setup lang="ts">
 import Services from "~/components/Services/index.vue";
 import {renderSeoTemplate} from "~/composables/seo";
 import About from "~/components/About/index.vue";
+import {useSort} from "~/store/sort";
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
 
 const seoTags = renderSeoTemplate('about')
 </script>

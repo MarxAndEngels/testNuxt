@@ -6,12 +6,14 @@
   </main>
   <Footer/>
   <Modal/>
+  <ModalText/>
 </template>
 
 <script setup lang="ts">
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Modal from '~/components/Modal'
+import ModalText from '~/components/Modal/text.vue'
 import {useModals} from "~/store/modals";
 import {sendUrlYandexMetrika, yandexMetrika, vkAds, googleTag} from "~/helpers/metrika";
 import {onMounted} from "vue";

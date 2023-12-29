@@ -123,17 +123,18 @@
     justify-content: space-between;
     flex-direction: row;
     position: relative;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
 
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: -24px;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, $color-white 0%, $color-black 120%);
-    }
+    border-bottom: 1px solid $color-grey-line;
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  bottom: -24px;
+    //  left: 0;
+    //  height: 1px;
+    //  width: 100%;
+    //  background: linear-gradient(90deg, $color-white 0%, $color-black 120%);
+    //}
   }
   .footer__line {
     display: flex;

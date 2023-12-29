@@ -24,7 +24,7 @@
   display: flex;
   gap: 6px;
   border: 1px solid #e7e7e7;
-  border-radius: 6px;
+  border-radius: $border-radius-main;
 }
 .list--marks-catalog .list__mark-item_descr{
   display: flex;

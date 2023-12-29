@@ -4,6 +4,7 @@
       <div class="catalog__offers">
         <CardOffer :key="offer.id" v-for="offer in offers" :offer="offer"/>
       </div>
+      <span v-if="route.name !='index'">
       <client-only v-if="!taxi">
         <Paginate
             v-if="last_page > 1"
@@ -18,6 +19,7 @@
         </Paginate>
       </client-only>
       <nuxt-link v-else :to="'/sets/for-taxi'" class="button button--more">Все автомобили для такси</nuxt-link>
+    </span>
     </div>
     <div v-else>
       <div class="catalog__offers">
@@ -39,9 +41,13 @@ import {scrollToElement} from "~/helpers/scroll";
 import {offersCatalogGql} from '~/apollo/queries/offers/offers'
 import {OfferCatalogType, OffersCatalogDataType, OffersCatalogInputType} from "~/app/types/offers";
 import {request} from '~/helpers/request'
+import CatalogSort from '~/components/Catalog/Sort.vue'
+import {useSort} from "~/store/sort";
 
 const props = defineProps<{
   taxi?: boolean;
+  limit?: number;
+  set?: string
 }>();
 const offers = ref<OfferCatalogType[]>()
 const route = useRoute()
@@ -53,6 +59,7 @@ const total = ref()
 const current_page = ref(1)
 const last_page = ref()
 
+const stateSort = useSort()
 
 let currentPagination = ref<number>(1)
 currentPagination.value = Number(route.query.page)
@@ -71,9 +78,9 @@ let variables = computed<OffersCatalogInputType>(() => {
     drive_type: route.query.drive_type?.toString().toUpperCase(),
     price_from: Number(route.query.price_from),
     price_to: Number(route.query.price_to),
-    sort: route.query.sort || 'created_at|desc',
+    sort: props.set ? props.set : props.taxi ? 'price|asc' : stateSort.sort ? stateSort.sort : route.query.sort ? route.query.sort : 'price|asc',
     set: props.taxi ? 'for-taxi' : route.params.set,
-    limit: props.taxi ? 6 : 12,
+    limit: props.limit ? props.limit : props.taxi ? 6 : 12,
     page: Number(route.query.page) || 1,
   }
 })

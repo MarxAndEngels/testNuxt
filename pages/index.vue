@@ -39,6 +39,8 @@
     </div>
   </section>
 
+
+
   <section class="section section--sets">
     <div class="container">
       <h2 class="heading heading--h2">Подборки</h2>
@@ -46,10 +48,26 @@
     </div>
   </section>
   
-  <section class="section section--services">
+  <!-- <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
+    </div>
+  </section> -->
+  <section class="section section--banks">
+    <div class="container">
+      <h2 class="heading heading--h2">Последние поступления</h2>
+      <Catalog :limit="9" class="mt-4" :set="'created_at|desc'"/>
+      <nuxt-link :to="'/new'" class="button opacity more mt-3">Все автомобили в наличии</nuxt-link>
+    </div>
+  </section>
+
+  <section class="section section--home-folders mt-5">
+    <div class="container mt-4">
+      <h2 class="heading heading--h2">
+        Акции и спецпредложения
+      </h2>
+      <Actions class="mt-5"/>
     </div>
   </section>
 
@@ -59,12 +77,13 @@
       <Banks/>
     </div>
   </section>
-  <section class="section section--contacts">
+
+  <!-- <section class="section section--contacts">
     <div class="container">
       <h2 class="heading heading--h2">Контакты</h2>
       <Contacts/>
     </div>
-  </section>
+  </section> -->
 
 </template>
 <script setup lang="ts">
@@ -77,7 +96,13 @@ import SetsMain from '~/components/Sets/Main.vue'
 
 import Contacts from "~/components/Contacts/index.vue";
 import {useSiteConfig} from "~/store/siteConfig";
+import {useSort} from "~/store/sort";
 
 const settings = useSiteConfig().settings
 const seoTags = renderSeoTemplate('index')
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
+
 </script>

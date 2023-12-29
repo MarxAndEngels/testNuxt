@@ -13,6 +13,13 @@
   gap: 16px;
 }
 
+.catalog__folders_home{
+  margin-bottom: 40px;
+  .f-carousel__dots{
+    display: none !important;
+  }
+} 
+
 @media screen and (min-width: $desktop-width) {
   .catalog__folders {
     display: flex;
@@ -25,6 +32,14 @@
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
+  }
+  .catalog__folders_home{
+    padding: 0 60px;
+    gap: 0;
+    margin-bottom: 40px;
+    .f-carousel__dots{
+      display: none !important;
+    }
   }
 }

@@ -22,7 +22,7 @@ select {
   position: relative;
   color: $color-black;
   transition: border .16s;
-  border-radius: 10px;
+  border-radius: $border-radius-main;
 
   &:after {
     content: '';
@@ -58,7 +58,7 @@ select {
 
 .select__desktop {
   display: none;
-  border-radius: $border-radius;
+  border-radius: $border-radius-main;
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -99,6 +99,7 @@ select {
     top: 50px;
     background: $color-white;
     border: 1px solid $color-black;
+    border-radius: $border-radius-main;
     z-index: 3;
     display: none;
   }

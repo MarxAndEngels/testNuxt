@@ -15,12 +15,12 @@
       <Catalog/>
     </div>
   </section>
-  <section class="section section--services">
+  <!-- <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script setup lang="ts">
@@ -30,6 +30,7 @@ import Services from "~/components/Services/index.vue";
 
 const route = useRoute()
 const sets = useSiteConfig().sets
+
 const seoTags = renderSeoTemplate('new.set', {
   set: sets.find(item => item.slug === route.params.set)
 })

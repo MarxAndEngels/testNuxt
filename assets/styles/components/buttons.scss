@@ -11,7 +11,14 @@
   font-weight: 700;
   text-transform: uppercase;
   color: $color-black;
-  border-radius: $border-radius;
+  border-radius: $border-radius-main;
+  &.more{
+    background-color: $color-grey-secondary;
+    color: $color-black;
+    span{
+      color: $color-black;
+    }
+  }
 }
 
 .button--white {

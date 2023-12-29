@@ -13,8 +13,16 @@
       <Benefits type="credit"/>
     </div>
   </section>
-  <section class="section section--home-folders">
+
+  <section class="section">
     <div class="container">
+      <FormCredit :taxi="true"/>
+    </div>
+  </section>
+
+
+  <section class="section section--home-folders mt-5">
+    <div class="container mt-5">
       <h2 class="heading heading--h2">
         Авто под такси
       </h2>
@@ -29,18 +37,14 @@
       <Catalog :taxi="true"/>
     </div>
   </section>
-  <section class="section">
-    <div class="container">
-      <FormCredit :taxi="true"/>
-    </div>
-  </section>
-  <section class="section section--services">
+
+  <!-- <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
     </div>
-  </section>
-  <section class="section section--banks">
+  </section> -->
+  <section class="section section--banks mt-4">
     <div class="container">
       <h2 class="heading heading--h2">Банки-партнеры</h2>
       <Banks/>

@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 16px;
+  box-shadow: $box-shadow;
 }
 
 .contacts__info-group-value {
@@ -33,7 +35,7 @@
     align-items: flex-start;
   }
   .contacts__info {
-    width: 260px;
+    width: 560px;
     gap: 24px;
     min-width: 260px;
   }
@@ -41,6 +43,6 @@
     margin-top: 8px;
   }
   .contacts__map {
-    height: 204px;
+    height: 300px;
   }
 }

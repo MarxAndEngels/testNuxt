@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="filter__list" v-show="showFilter" :class="{'nospace': !showFilter}"> 
+  <div class="filter__list" v-show="stateShowFilter.showFilter" :class="{'nospace': !stateShowFilter.showFilter}">
     <div class="filter__list-group">
       <div class="filter__list-item">
         <Select :has-alphabet="true" @select="handlerSelect" :options="marks" title="Марка" type="mark" :value="mark"/>
@@ -34,10 +34,18 @@
     </div>
     </div>
 
+  <div class="wrapper__filter-options">
     <div class="filter__list_select" @click="changeShowFilters">
-    <span v-if="showFilter == false">Показать фильтры + </span>
-    <span v-else>Скрыть фильтры - </span>
+      <span v-if="stateShowFilter.showFilter == false" class="filter__list_select-wrap">
+           <nuxt-icon class="catalog__filter-icon" name="filter"/>
+        Открыть фильтр </span>
+      <span v-else class="filter__list_select-wrap">
+      <nuxt-icon class="catalog__filter-icon" name="filter"/>
+        Скрыть фильтр</span>
+    </div>
+      <CatalogSort v-if="route.name != 'index'"/>
   </div>
+
   </div>
 </template>
 <script setup lang="ts">
@@ -53,9 +61,11 @@ import {useSiteConfig} from "~/store/siteConfig";
 import {numberFormat} from "~/helpers/filters";
 import {MarkType} from "~/app/types/marks";
 import {FolderType} from "~/app/types/folders";
+import CatalogSort from "~/components/Catalog/Sort.vue";
 const { isMobile } = useDevice();
 
 const route = useRoute()
+
 const router = useRouter()
 const total = ref()
 const hasChanged = ref(false)
@@ -86,17 +96,18 @@ const chosen_price_to = ref<number>(0)
 
 const statePrice = ref<boolean>(false)
 
-const showFilterId = useShowFilter()
-const { setShowFilter } = showFilterId
-const { showFilter } = storeToRefs(showFilterId)
+// const showFilterId = useShowFilter()
+// const { setShowFilter } = showFilterId
+// const { showFilter } = storeToRefs(showFilterId)
 
+const stateShowFilter = useShowFilter()
 
 if(isMobile){
-  setShowFilter(false)
+  stateShowFilter.setShowFilter(false)
 }
 
 let changeShowFilters = () =>{
-  setShowFilter(!showFilter)
+  stateShowFilter.setShowFilter(!stateShowFilter.showFilter)
 }
 
 

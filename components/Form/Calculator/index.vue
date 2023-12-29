@@ -9,7 +9,7 @@
         <Slider :lazy="false" v-model="paymentValue" :step="10" :options="paymentOptions"/>
         <div class="calculator__slider-steps calculator__slider-steps-payment"
              :class="{ 'calculator__slider-steps-payment--installment': installment }">
-          <div v-if="installment" class="calculator__slider-step" v-for="i in 7"></div>
+          <div v-if="installment" class="calculator__slider-step" v-for="i in 8"></div>
           <div v-else class="calculator__slider-step" v-for="i in 9"></div>
         </div>
       </div>
@@ -26,8 +26,8 @@
         <Slider :lazy="false" v-model="periodValue" :options="periodOptions"/>
         <div class="calculator__slider-steps calculator__slider-steps-period"
              :class="{ 'calculator__slider-steps-period--installment': installment }">
-          <div v-if="installment" class="calculator__slider-step" v-for="i in 7"></div>
-          <div v-else class="calculator__slider-step" v-for="i in 9"></div>
+          <div v-if="installment" class="calculator__slider-step" v-for="i in 5"></div>
+          <div v-else class="calculator__slider-step" v-for="i in 10"></div>
         </div>
       </div>
     </div>
@@ -61,12 +61,10 @@ const periodOptions = computed(() => {
       snap: true,
       range: {
         'min': 2,
-        '19%': 6,
-        '35%': 12,
-        '52%': 24,
-        '68%': 36,
-        '85%': 48,
-        'max': 60,
+        '26.5%': 6,
+        '52%': 12,
+        '76%': 24,
+        'max': 36
       }
     }
   } else {
@@ -74,14 +72,15 @@ const periodOptions = computed(() => {
       snap: true,
       range: {
         'min': 2,
-        '14%': 6,
-        '26%': 12,
-        '39%': 24,
-        '51%': 36,
-        '63.5%': 48,
-        '76%': 60,
-        '88%': 72,
-        'max': 84
+        '13%': 6,
+        '24%': 12,
+        '35%': 24,
+        '46%': 36,
+        '57%': 48,
+        '68%': 60,
+        '79%': 72,
+        '90%': 84,
+        'max': 96
       }
     }
   }
@@ -92,12 +91,13 @@ const paymentOptions = computed(() => {
     return {
       snap: true,
       range: {
-        'min': 10,
-        '19%': 20,
-        '35%': 30,
-        '52%': 40,
-        '68%': 50,
-        '85%': 60,
+        'min': 0,
+        '16%': 10,
+        '30%': 20,
+        '44.5%': 30,
+        '58%': 40,
+        '72.5%': 50,
+        '87': 60,
         'max': 70,
       }
     }

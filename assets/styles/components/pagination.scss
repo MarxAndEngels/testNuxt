@@ -6,12 +6,15 @@
   list-style: none;
   margin-top: 16px;
   padding-bottom: 24px;
+  margin-top: 28px;
+  *{
+    font-size: 18px;
+  }
 }
 
 .pagination li {
   border: none;
-  padding: 4px;
-  margin: 0 4px;
+  //margin: 0 4px;
   font-size: 14px;
 
   &:first-child {
@@ -23,7 +26,7 @@
   }
 
   &.active a {
-    color: $color-grey-light;
+    color: $color-main;
   }
 
   &.prev.disabled {
@@ -46,5 +49,24 @@
 .pagination li a {
   display: block;
   cursor: pointer;
+  border: 1px solid $color-grey-light-main;
+  padding: 8px 16px;
+  border-right: none;
+  &:last-child{
+    border-right: 1px solid $color-grey-light-main;
+  }
+}
+@media screen and (max-width: $mobile-width-only) {
+  .pagination li a {
+    padding: 8px 12px;
+  }
+  .prev,.disabled{
+      display: none;
+  }
+}
 
+@media screen and (min-width: $desktop-width) {
+  .pagination {
+    justify-content: center;
+  }
 }

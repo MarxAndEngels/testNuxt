@@ -25,8 +25,9 @@
 }
 
 .section--benefits {
-  margin-top: -64px;
+  margin-top: -54px;
   position: relative;
+
   z-index: 2;
 }
 
@@ -46,6 +47,14 @@
   margin-top: 18px;
 }
 
+.section--home-folders {
+  margin-top: 18px;
+  .f-button{
+    background: black !important;
+    border-radius: 50%;
+  }
+}
+
 .section--contacts {
   margin-top: 48px;
 }
@@ -63,12 +72,23 @@
 }
 
 .section--catalog {
-  margin-top: 24px;
+  margin-top: 0px;
+}
+@media screen and (max-width: $tablet-width) {
+  .section--home-folders {
+    margin-top: 30px;
+  }
+  .section--filters {
+    margin-bottom: 0;
+  }
+  .section--filters {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .section--home-folders {
-    margin-top: 48px;
+    margin-top: 20px;
   }
   
 }

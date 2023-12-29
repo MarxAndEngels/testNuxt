@@ -3,9 +3,11 @@
   background: $color-white;
   text-decoration: none;
   color: $color-black;
-  padding: 8px;
+  padding: 12px;
   transition: top .16s;
   position: relative;
+  border-right: 6px;
+  border-radius: $border-radius-main;
 }
 
 .mini-card__title {
@@ -171,6 +173,7 @@
   height: 100%;
   object-fit: cover;
   width: 100%;
+  border-radius: $border-radius-main;
 }
 
 .mini-card__offer-slide--render img {
@@ -190,7 +193,7 @@
     width: calc(33% - 23px);
   }
   .mini-card--offer {
-    width: calc(33% - 23px);
+    width: calc(33% - 14px);
   }
   .mini-card {
     transition: top .16s;

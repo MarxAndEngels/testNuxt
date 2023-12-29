@@ -223,7 +223,7 @@ const request = async () => {
 
 //КАЛЬКУЛЯТОР ----------------------------------------------------
 let payment = ref(0)
-let period = ref(84)
+let period = ref(96)
 
 let total = ref()
 

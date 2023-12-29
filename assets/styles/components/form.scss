@@ -3,7 +3,7 @@
 }
 
 .form__banner {
-  height: 240px;
+  height: 186px;
   width: 100%;
   position: relative;
   margin-top: 16px;
@@ -31,9 +31,9 @@
     counter-increment: form;
     content: counter(form);
     font-size: 140px;
-    color: $color-white;
+    color: $color-black;
     opacity: 0.1;
-    display: none;
+    // display: none;
     top: 0;
     right: 0;
     z-index: 1;
@@ -266,7 +266,7 @@
 
 @media screen and (min-width: $desktop-width) {
   .form__banner {
-    height: 410px;
+    height: 308px;
   }
   .form__banner-title {
     font-size: 40px;

@@ -188,8 +188,8 @@ const request = async () => {
 }
 
 //КАЛЬКУЛЯТОР ----------------------------------------------------
-let payment = ref(10)
-let period = ref(60)
+let payment = ref(0)
+let period = ref(36)
 
 let total = ref()
 

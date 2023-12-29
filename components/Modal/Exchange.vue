@@ -128,7 +128,7 @@ const offerId = computed(() => {
   } else return ''
 })
 let payment = ref(0)
-let period = ref(84)
+let period = ref(96)
 const router = useRouter()
 let total = ref()
 total.value = calculate(modalOffer.value?.price, payment.value, period.value)

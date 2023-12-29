@@ -18,14 +18,14 @@
       <FormInstallment/>
     </div>
   </section>
-  <section class="section section--services">
+  <!-- <section class="section section--services">
     <div class="container">
       <h2 class="heading heading--h2">Услуги</h2>
       <Services/>
     </div>
-  </section>
+  </section> -->
   <section class="section section--banks">
-    <div class="container">
+    <div class="container mt-5">
       <h2 class="heading heading--h2">Банки-партнеры</h2>
       <Banks/>
     </div>

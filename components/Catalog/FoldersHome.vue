@@ -1,5 +1,5 @@
 <template>
-  <div class="f-carousel f-carousel--folders catalog__folders" id="catalogFolderSlider">
+  <div class="f-carousel f-carousel--folders catalog__folders catalog__folders_home" id="catalogFolderSlider">
     <div class="f-carousel__viewport">
       <div class="f-carousel__track">
         <div class="f-carousel__slide catalog__folder-slide" v-for="folder in folders">

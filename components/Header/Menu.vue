@@ -54,10 +54,10 @@ const menu = [
     title: 'Контакты',
     slug: '/contacts'
   },
-  {
-    title: 'Услуги',
-    slug: '/promo'
-  },
+  // {
+  //   title: 'Услуги',
+  //   slug: '/promo'
+  // },
   // {
   //   title: 'Банки',
   //   slug: '/banks'

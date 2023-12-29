@@ -40,30 +40,22 @@
         text: `Успей оформить автокредит!`,
         slug: 'credit',
         button: 'Выбрать авто',
-        image: "/img/slider/index/slide-3",
-      },
-      {
-        title: `Распродажа авто 2023 года`,
-        text: `Успей оформить автокредит!`,
-        slug: 'credit',
-        button: 'Выбрать авто',
-        image: "/img/slider/index/slide-4",
-      },
-      {
-        title: `Обменяй автомобиль по Trade-In`,
-        text: `Ввыкупим за 30 минут, деньги на руки`,
-        slug: 'exchange',
-        button: 'Выбрать авто',
         image: "/img/slider/index/slide-1",
       },
       {
         title: `Распродажа авто 2023 года`,
         text: `Успей оформить автокредит!`,
-        slug: 'credit',
+        slug: 'exchange',
         button: 'Выбрать авто',
         image: "/img/slider/index/slide-2",
       },
-  
+      {
+        title: `Обменяй автомобиль по Trade-In`,
+        text: `Ввыкупим за 30 минут, деньги на руки`,
+        slug: 'credit',
+        button: 'Выбрать авто',
+        image: "/img/slider/index/slide-3",
+      }
   
     ];
   

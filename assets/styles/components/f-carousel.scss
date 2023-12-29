@@ -6,8 +6,14 @@
   width: 96px;
 }
 
+
 .f-carousel .f-carousel__nav button {
-  color: $color-white;
+  color: $color-black !important;
+}
+
+.f-button{
+  background: black !important;
+  border-radius: 50% !important;
 }
 
 .f-carousel .f-carousel__dots {
@@ -19,7 +25,11 @@
 .f-carousel .f-carousel__dots .f-carousel__dot {
   width: 1px;
   height: 100%;
-  background: $color-white;
+  background: $color-black;
+}
+
+.f-carousel__dots{
+  display: none !important;
 }
 
 .f-carousel .f-carousel__dots button {

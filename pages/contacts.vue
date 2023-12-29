@@ -21,6 +21,11 @@
 import Contacts from "~/components/Contacts";
 import {renderSeoTemplate} from "~/composables/seo";
 import Banks from "~/components/Banks/index.vue";
+import {useSort} from "~/store/sort";
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
 
 const seoTags = renderSeoTemplate('contacts')
 </script>
