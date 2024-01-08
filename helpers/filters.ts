@@ -7,7 +7,7 @@ export const numberFormat = (value: number) => {
 }
 export const creditPrice = (value: number) => {
     let percent: number = 4.9
-    let creditTime: number = 84;
+    let creditTime: number = 96;
     let i: number = percent / 12 / 100;
     let K: number = (i * Math.pow(1 + i, creditTime)) / (Math.pow(1 + i, creditTime) - 1);
     return numberFormat(Math.round(K * value));

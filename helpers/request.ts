@@ -6,9 +6,10 @@ import {OfferPageGql} from "~/apollo/queries/new/newOffer";
 import {sendNewFeedbackGql, SendNewFeedback, SendNewFeedbackData} from "~/apollo/mutations/newFeedback";
 import {filterNewGql, OfferFilterNewDataType, OfferFilterNewInputType} from "~/apollo/queries/new/filters";
 import {OfferPageDataType, OfferPageInputType} from "~/app/types/offers";
+import {mainDomain} from "~/app/variables";
 
 export const request = async <Response, Request = undefined>(query: DocumentNode, variables?: Request, isLazy?: boolean) => {
-    let siteId = 3
+    let siteId = mainDomain.siteId
     let assignVariables = {
         site_id: siteId
     }
@@ -21,7 +22,7 @@ export const request = async <Response, Request = undefined>(query: DocumentNode
     }) : useAsyncQuery<Response>({query, variables: removeEmptyParams})
 }
 export const postRequest = async <Response, Request = undefined>(query: DocumentNode, variables?: Request) => {
-    let siteId = 3
+    let siteId = mainDomain.siteId
     let assignVariables = {
         site_id: siteId
     }

@@ -8,7 +8,8 @@ export const domains = [
         link: 'https://atlas-official.ru',
         catalogRoute: 'used',
         hasGeneration: true,
-        root: true
+        root: true,
+        siteId: 3,
     },
 ]
 export const mainDomain = domains.find(value => value.root) || domains[0]
