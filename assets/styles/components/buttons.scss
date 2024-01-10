@@ -28,14 +28,16 @@
 
 .button--more {
   width: 100%;
-  background: $color-black;
-  color: $color-white;
-  border: 1px solid $color-white;
+  background-color: $color-grey-secondary;
+  color: $color-black;
+  span{
+    color: $color-black;
+  }
   margin-top: 16px;
 }
 
 .button--credit {
-  background: $color-main;
+  background: $color-main-second;
   color: $color-white;
 }
 
@@ -53,7 +55,7 @@
 }
 .button--credit-mini{
   color: $color-white;
-  background: $color-main;
+  background: $color-main-second;
 }
 
 .button--black {

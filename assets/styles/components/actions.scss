@@ -46,7 +46,7 @@
 .actions__item .button {
   position: relative;
   z-index: 3;
-  background: $color-main;
+  background: $color-main-second;
   padding: 6px 24px;
   color: $color-white;
 }
@@ -104,7 +104,7 @@
 .button--action{
   width: 100%;
   margin-top: 10px;
-  background: $color-main;
+  background: $color-main-second;
   color: $color-white !important;
   span{
     color: $color-white !important;

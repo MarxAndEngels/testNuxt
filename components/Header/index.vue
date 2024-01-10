@@ -26,7 +26,8 @@
         </div>
         <div class="header__logo">
           <nuxt-link @click.native="clickMenu" to="/">
-            <img src="/img/logo.svg" alt="logo">
+            <img v-if="isMobile" src="/img/logo.svg" alt="logo">
+            <img v-else src="/img/logo-desktop.svg" alt="logo">
           </nuxt-link>
         </div>
         <!-- <div class="header__contacts">
@@ -52,6 +53,7 @@ import {useModals} from "~/store/modals";
 import {useSiteConfig} from "~/store/siteConfig";
 import {useComparison} from "~/store/comparison"
 import {clearPhone} from "~/helpers/filters";
+const { isMobile } = useDevice();
 
 const modal = useModals()
 const route = useRoute();

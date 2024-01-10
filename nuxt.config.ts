@@ -10,7 +10,7 @@ export default defineNuxtConfig({
                 lang: 'ru'
             },
             meta: [
-                {name: 'robots', content: 'noindex, nofollow'},
+                // {name: 'robots', content: 'noindex, nofollow'},
                 {charset: "UTF-8"},
                 {name: "theme-color", content: "#416388"},
                 {'http-equiv': "Content-Type", content: "text/html; charset=utf-8"},

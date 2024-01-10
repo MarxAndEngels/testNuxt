@@ -19,7 +19,7 @@
       <div>
         Ваша выгода
       </div>
-      <div>
+      <div class='bonuses__price_benefit'>
         {{ numberFormat(difference - dopSum) }} ₽
       </div>
     </div>

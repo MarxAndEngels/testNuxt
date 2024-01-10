@@ -6,6 +6,7 @@
   display: flex;
   font-size: 24px;
   gap: 12px;
+  align-items: center;
 }
 
 .buy__options-price-bold {
@@ -20,6 +21,11 @@
 
 .buy__options-buttons--call {
   position: relative;
+}
+
+.buy__options-price-regular{
+  color: $color-main-second;
+  font-size: 18px;
 }
 
 .buy__options-buttons--call .phone {

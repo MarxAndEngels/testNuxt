@@ -60,10 +60,13 @@
 
 .mini-card__bold-title {
   font-weight: 700;
+  font-size: 18px;
 }
+
 
 .mini-card__regular-title {
   font-weight: 400;
+  font-size: 18px;
 }
 
 .mini-card__image {
@@ -108,12 +111,14 @@
 }
 
 .mini-card__prices-price--actual {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
+  color: $color-main;
 }
 
 .mini-card__prices-price--credit {
-  font-size: 12px;
+  font-size: 14px;
+  color: $color-main-second;
 }
 
 .mini-card__controls {
@@ -133,7 +138,6 @@
 
 .mini-card__tech-item {
   padding: 0 8px;
-  border-right: 1px solid $color-black;
 
   &:first-child {
     padding-left: 0;

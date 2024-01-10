@@ -68,7 +68,7 @@
       Dots: false,
       transition: "slide",
       Autoplay: {
-        timeout: 6000,
+        timeout: 5000,
       }
     };
     const fc = new Carousel(container, options, {Autoplay});

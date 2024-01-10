@@ -23,8 +23,8 @@
       </div>
     </div>
     <div class="mini-card__controls">
-      <div class="button button--border-opacity" v-if="folder.availability">
-        В наличии
+      <div class="button button--credit" v-if="folder.availability">
+       Подробнее
       </div>
       <div class="button button--border-opacity" v-else-if="folder.arrival">
         Скоро в наличии
@@ -32,9 +32,9 @@
       <div class="button button--border-opacity" v-else-if="!folder.availability">
         Нет в наличии
       </div>
-      <div class="button button--black">
+      <!-- <div class="button button--black">
         Подробнее
-      </div>
+      </div> -->
     </div>
   </nuxt-link>
 </template>

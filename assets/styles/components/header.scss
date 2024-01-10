@@ -102,10 +102,10 @@
 .header__menu {
   position: fixed;
   z-index: 15;
-  top: 126px;
+  top: 116px;
   left: 0;
   width: 100%;
-  height: calc(100% - 59px);
+  height: calc(100% - 116px);
   background: $color-white;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .header__logo {
-  width: 145px;
+  // width: 145px;
 }
 
 .header__logo a {
@@ -159,6 +159,8 @@
 
 .header__logo img {
   width: 100%;
+  max-width: 220px;
+  // min-width: 230px;
 }
 
 .header__menu-folders {
@@ -208,6 +210,14 @@
 }
 
 @media screen and (max-width: $mobile-width-only) {
+
+  .header__inner {
+    padding: 14px 0;
+  }
+  .header__logo img {
+    width: 100%;
+    max-width: 194px;
+  }
   
 .header__menu-item {
   text-transform: uppercase;
