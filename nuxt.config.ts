@@ -67,6 +67,7 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-icon',
         'nuxt-icons',
+        'nuxt-simple-sitemap',
         '@nuxtjs/apollo',
         '@pinia/nuxt',
         'nuxt-jsonld',

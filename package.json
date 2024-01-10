@@ -25,7 +25,8 @@
     "gulp-imagemin": "^8.0.0",
     "gulp-webp": "^4.0.1",
     "nuxt": "^3.8.0",
-    "nuxt-icon": "^0.4.0"
+    "nuxt-icon": "^0.4.0",
+    "nuxt-simple-sitemap": "^3.4.0"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.17",
