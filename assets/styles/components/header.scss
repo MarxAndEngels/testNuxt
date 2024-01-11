@@ -234,7 +234,8 @@
     display: none;
   }
   .header__menu{
-    top: 83px;
+    top: 64px;
+    height: calc(100% - 64px);
   }
 }
 
