@@ -37,7 +37,7 @@ let items = ref<any>([
   
 ])
 
-let activeSort = ref<string>('Сначала дешевле')
+let activeSort = ref<string>('Последние поступления')
 let open = ref<boolean>(false)
 
 const stateSort = useSort()

@@ -7,7 +7,7 @@
     <!--    equipment[activeTab]: {{equipment[activeTab]}}-->
     <DefaultSelect @select="handlerSelect" class="offer__equipment-select" :options="equipment"
                    :title="equipment[activeTab].title" :value="equipment[activeTab]"/>
-    <ul class="offer__equipment-tabs">
+    <ul class="offer__equipment-tabs" v-if="equipment">
       <li class="offer__equipment-tab" v-for="(group, index) in equipment"
           :class="{ 'offer__equipment-tab--active': index === activeTab }" @click="activeTab = index" :key="index">
         {{ group.title }}
